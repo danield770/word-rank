@@ -43,6 +43,18 @@ it('converts the wordMap to an array of key-star array pairs', () => {
     ['plane', 2],
     ['truck', 1],
   ]);
+  expect(
+    wordMapToStars([
+      { car: 5, plane: 4, boat: 3, tractor: 2, motorcycle: 1 },
+      5,
+    ])
+  ).toEqual([
+    ['car', 5],
+    ['plane', 4],
+    ['boat', 3],
+    ['tractor', 2],
+    ['motorcycle', 1],
+  ]);
 });
 it('sorts words with the same star frequency alphabetically', () => {
   expect(

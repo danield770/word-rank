@@ -34,10 +34,10 @@ export const wordMapToStars = (input) => {
     five = [];
   const [map, max] = input;
   for (let key in map) {
-    if (map[key] < max / 5) one.push([key, 1]);
-    else if (map[key] < (2 * max) / 5) two.push([key, 2]);
-    else if (map[key] < (3 * max) / 5) three.push([key, 3]);
-    else if (map[key] < (4 * max) / 5) four.push([key, 4]);
+    if (map[key] <= max / 5) one.push([key, 1]);
+    else if (map[key] <= (2 * max) / 5) two.push([key, 2]);
+    else if (map[key] <= (3 * max) / 5) three.push([key, 3]);
+    else if (map[key] <= (4 * max) / 5) four.push([key, 4]);
     else five.push([key, 5]);
   }
   return [

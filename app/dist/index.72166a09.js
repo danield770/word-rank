@@ -526,7 +526,7 @@ const wordMapToStars = input => {
   const one = [], two = [], three = [], four = [], five = [];
   const [map, max] = input;
   for (let key in map) {
-    if (map[key] < max / 5) one.push([key, 1]); else if (map[key] < 2 * max / 5) two.push([key, 2]); else if (map[key] < 3 * max / 5) three.push([key, 3]); else if (map[key] < 4 * max / 5) four.push([key, 4]); else five.push([key, 5]);
+    if (map[key] <= max / 5) one.push([key, 1]); else if (map[key] <= 2 * max / 5) two.push([key, 2]); else if (map[key] <= 3 * max / 5) three.push([key, 3]); else if (map[key] <= 4 * max / 5) four.push([key, 4]); else five.push([key, 5]);
   }
   return [[...five.sort()], [...four.sort()], [...three.sort()], [...two.sort()], [...one.sort()]].flatMap(n => !n ? [] : n);
 };
