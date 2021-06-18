@@ -1,0 +1,29 @@
+.spinner {
+  display: none;
+  align-items: center;
+}
+
+.spinner.loading {
+  display: flex;
+}
+
+.spinner::before {
+  content: '';
+  display: inline-block;
+  margin: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 5px solid maroon;
+  border-top: 5px solid transparent;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
